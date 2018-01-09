@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="inPayment" 
+        name="还款中"
+        class="com.minghao.common.business.pojo.Product" limit="500">
+      <title>我的借款导出</title>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">借款金额(元)</cell>
+      <cell property="deadline" width="200">期数</cell>
+      <cell property="repayingFund" width="200">下期还款本息(元)</cell>
+      <cell property="repaymentDate" width="200">下期还款日</cell>
+      <cell property="repurchaseModeDesc" width="200">还款方式</cell>
+      <cell property="productStatusDesc" width="200">状态</cell>
+    </excel>
+    <excel id="inReview" 
+        name="审核中"
+        class="com.minghao.common.business.pojo.Product" limit="500">
+      <title>我的借款导出</title>
+      <cell property="createdDate" width="200">申请借款日期</cell>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="productAmount" width="200">借款金额(元)</cell>
+      <cell property="profit" width="200">年化利率(%)</cell>
+      <cell property="productDeadline" width="200">期数</cell>
+      <cell property="repurchaseModeDesc" width="200">还款方式</cell>
+	  <cell property="productStatusDesc" width="200">状态</cell>
+    </excel>
+    <excel id="approved" 
+        name="招标中"
+        class="com.minghao.common.business.pojo.Product" limit="500">
+      <title>我的借款导出</title>
+      <cell property="investBeginDate" width="200">招标时间</cell>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="productAmount" width="200">借款金额(元)</cell>
+      <cell property="profit" width="200">年化利率(%)</cell>
+      <cell property="productDeadline" width="200">期数</cell>
+      <cell property="repurchaseModeDesc" width="200">还款方式</cell>
+	  <cell property="productStatusDesc" width="200">状态</cell>
+    </excel>
+    <excel id="beenFinished" 
+        name="已完成"
+        class="com.minghao.common.business.pojo.Product" limit="500">
+      <title>我的借款导出</title>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="productAmount" width="200">借款金额(元)</cell>
+      <cell property="profit" width="200">年化利率(%)</cell>
+      <cell property="productDeadline" width="200">期限</cell>
+      <cell property="totalInterest" width="200">借款总利息(元)</cell>
+      <cell property="repaymentDate" width="200">结清日期</cell>
+      <cell property="repurchaseModeDesc" width="200">还款方式</cell>
+	  <cell property="productStatusDesc" width="200">状态</cell>
+    </excel>
+</excel-mapper>

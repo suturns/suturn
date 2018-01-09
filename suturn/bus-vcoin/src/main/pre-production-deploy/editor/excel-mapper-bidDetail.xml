@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="bidDetailExport" 
+        name="投标记录"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投标记录列表导出</title>
+      <cell property="createdDate" width="200">投标时间</cell>
+      <cell property="title" width="200">借款标题</cell> 
+      <cell property="bidAmount" width="200">投资金额(元)</cell>
+      <cell property="profit" width="200">年华利率(%)</cell> 
+      <cell property="productDeadlineStr" width="200">期限</cell> 
+      <cell property="modeName" width="200">还款方式</cell> 
+      <cell property="stateName" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

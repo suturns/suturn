@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+<!-- 	<property name="LOG_HOME" value="/logs/tomcat8080/web" />  -->
+	<property name="LOG_HOME" value="../../cgkxLog/weblog" /> 
+    <!-- 控制台输出日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+	    <!-- 日志输出编码 -->
+	    <Encoding>UTF-8</Encoding>  
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} >>> %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!--每天生成一个日志文件，保存30天的日志文件。-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+        <!--日志文件最大的大小-->  
+       <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">  
+         <MaxFileSize>10MB</MaxFileSize>  
+       </triggeringPolicy>  
+    </appender>
+    <!--指定logger name为包名或类全名 指定级别 additivity设置是否传递到root logger -->
+<!--     <logger name="slf4j" level="INFO" additivity="false"> -->
+<!--         <appender-ref ref="STDOUT" /> -->
+<!--         <appender-ref ref="FILE"/> -->
+<!--     </logger> -->
+ <!-- 按日期和大小区分的滚动日志  DEBUG -->
+  <appender name="DEBUG-OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <encoder>
+        <pattern>%level %d{yyyy-MM-dd HH:mm:ss} [%class:%line] - %m%n</pattern>
+    </encoder>
+      <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>DEBUG</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <fileNamePattern>${LOG_HOME}/debug/debug-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+         <maxHistory>30</maxHistory>
+        <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>80MB</maxFileSize>
+        </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+  </appender>
+  <!-- 按日期和大小区分的滚动日志  INFO -->
+  <appender name="INFO-OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <encoder>
+        <pattern>%level %d{yyyy-MM-dd HH:mm:ss} [%class:%line] - %m%n</pattern>
+    </encoder>
+      <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>INFO</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <fileNamePattern>${LOG_HOME}/info/info-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+         <maxHistory>30</maxHistory>
+        <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>80MB</maxFileSize>
+        </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+  </appender>
+  <!-- 按日期和大小区分的滚动日志  ERROR -->
+  <appender name="ERROR-OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <encoder>
+        <pattern>%level %d{yyyy-MM-dd HH:mm:ss} [%class:%line] - %m%n</pattern>
+    </encoder>
+      <filter class="ch.qos.logback.classic.filter.LevelFilter">
+      <level>ERROR</level>
+      <onMatch>ACCEPT</onMatch>
+      <onMismatch>DENY</onMismatch>
+    </filter>
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <fileNamePattern>${LOG_HOME}/error/error-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+         <maxHistory>30</maxHistory>
+        <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        <maxFileSize>80MB</maxFileSize>
+        </timeBasedFileNamingAndTriggeringPolicy>
+    </rollingPolicy>
+  </appender>
+    <!--根logger控制-->
+   <root level="DEBUG">     
+        <appender-ref ref="STDOUT" />     
+        <appender-ref ref="ERROR-OUT" />     
+        <appender-ref ref="INFO-OUT" /> 
+        <appender-ref ref="DEBUG-OUT" /> 
+    </root>  
+</configuration>

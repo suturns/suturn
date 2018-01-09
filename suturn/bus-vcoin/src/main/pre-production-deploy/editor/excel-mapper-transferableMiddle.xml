@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="transferableMiddleExport" 
+        name="转让中债权"
+        class="com.minghao.common.business.pojo.ReceiptTransfer" limit="500">
+      <title>转让列表导出</title>
+      <cell property="title" width="200">借款标题</cell> 
+       <cell property="createdDate" width="200">申请日期</cell> 
+      <cell property="transferNumber" width="200">剩余期数</cell> 
+      <cell property="successAmount" width="200">转让价格(元)</cell> 
+      <cell property="rateOfDiscount" width="200">折价率(%)</cell> 
+    </excel>
+</excel-mapper>

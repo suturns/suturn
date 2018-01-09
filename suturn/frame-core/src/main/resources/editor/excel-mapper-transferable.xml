@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="transferableExport" 
+        name="可转让债权"
+        class="com.minghao.common.business.pojo.Bid" limit="500">
+      <title>可转让列表导出</title>
+      <cell property="title" width="300">借款标题</cell> 
+      <cell property="fullBidDate" width="200">生息日期</cell> 
+      <cell property="profit" width="200">年化利率(%)</cell> 
+      <cell property="leftSurplusReceiptIndex" width="200">剩余期数</cell> 
+      <cell property="waitCapitalInterest" width="200">待收本息(元)</cell> 
+      <cell property="latelyRepaymentDate" width="200">下期回款日期</cell> 
+    </excel>
+</excel-mapper>

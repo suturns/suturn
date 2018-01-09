@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="autoRepayList"  name="自动已经还款数据"
+        class="com.minghao.common.business.pojo.RepaymentPlan" limit="500">
+      <title>自动已经还款数据</title>
+      <cell property="version" width="200">还款日期</cell>
+      <cell property="productTitle" width="200">借款标题</cell>
+      <cell property="capital" width="200">还款金额</cell>
+      <cell property="capital" width="200">本金</cell>
+      <cell property="interest" width="200">利息</cell>
+      <cell property="planIndex" width="200" >期限</cell>
+      <cell property="statusDesc" width="200">状态</cell>
+    </excel>
+    
+</excel-mapper>

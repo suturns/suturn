@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="alreadyBuyExport" 
+        name="已购买债权"
+        class="com.minghao.common.business.pojo.Bid" limit="500">
+      <title>已购买列表导出</title>
+      <cell property="title" width="200">借款标题</cell> 
+      <cell property="createdDate" width="200">购买时间</cell>
+      <cell property="allSurplusReceiptIndex" width="200">剩余期数</cell> 
+      <cell property="profit" width="200">年化利率(%)</cell> 
+      <cell property="amount" width="200">转让价格(元)</cell> 
+    </excel>
+</excel-mapper>

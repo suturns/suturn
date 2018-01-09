@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="investmentExport" 
+        name="投资列表"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投资列表导出</title>
+      <cell property="createdDate" width="200">投标时间</cell>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">投标金额</cell>
+      <cell property="name" width="200">借款人</cell>
+      <cell property="productDeadline" width="200">期限</cell>
+      <cell property="modeName" width="200">还款方式</cell>
+	  <cell property="statusName" width="200">借款状态</cell>
+    </excel>
+</excel-mapper>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="schedule-console" version="3.0">
+	<display-name>front</display-name>
+	<!-- spring -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:spring/spring-mybatis2.xml,
+			<!--classpath:spring/spring-redis.xml,-->
+			classpath:spring/spring-web-init.xml
+			<!--classpath:spring/spring-shiro.xml,-->
+			<!--classpath:spring/spring-thread.xml-->
+		</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+	<!-- init -->
+	<servlet>
+		<servlet-name>startUp</servlet-name>
+		<servlet-class>com.ihs.ifs.web.MainInitServlet</servlet-class>
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+
+	<!-- logback -->
+	<context-param>
+		<param-name>logbackConfigLocation</param-name>
+		<param-value>classpath:config/logback.xml</param-value>
+	</context-param>
+	<!--<listener>-->
+		<!--<listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>-->
+	<!--</listener>-->
+
+	<!-- shiroFilter -->
+	<!-- 配置Shiro过滤器,先让Shiro过滤系统接收到的请求 -->
+	<!-- 这里filter-name必须对应applicationContext.xml中定义的<bean id="shiroFilter"/> -->
+	<!-- 使用[/*]匹配所有请求,保证所有的可控请求都经过Shiro的过滤 -->
+	<!-- 通常会将此filter-mapping放置到最前面(即其他filter-mapping前面),以保证它是过滤器链中第一个起作用的 -->
+
+	<!-- xss攻击过滤 -->
+	<!--<filter>-->
+		<!--<filter-name>XssSqlFilter</filter-name>-->
+		<!--<filter-class>com.minghao.web.filter.XssFilter</filter-class>-->
+	<!--</filter>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>XssSqlFilter</filter-name>-->
+		<!--<url-pattern>/*</url-pattern>-->
+		<!--<dispatcher>REQUEST</dispatcher>-->
+	<!--</filter-mapping>-->
+	<!-- Druid web监控 -->
+	<servlet>
+		<servlet-name>DruidStatView</servlet-name>
+		<servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DruidStatView</servlet-name>
+		<url-pattern>/druid/*</url-pattern>
+	</servlet-mapping>
+	<!-- spring MVC -->
+	<servlet>
+		<servlet-name>dispatch</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				classpath:spring/spring-mvc.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatch</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!--<error-page>-->
+		<!--<error-code>404</error-code>-->
+		<!--<location>/WEB-INF/error/404.jsp</location>-->
+	<!--</error-page>-->
+	<!--<error-page>-->
+		<!--<error-code>500</error-code>-->
+		<!--<location>/WEB-INF/error/500.jsp</location>-->
+	<!--</error-page>-->
+</web-app>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="flowExport" 
+        name="电子账单"
+        class="com.minghao.common.business.pojo.Flow" limit="500">
+      <title>交易流水导出</title>
+      <cell property="code" width="200">流水号</cell>
+      <cell property="createdDate" width="200">日期</cell> 
+      <cell property="income" width="200">收入</cell> 
+      <cell property="expenditure" width="200">支出</cell> 
+      <cell property="flowTypeDesc" width="200">交易类型</cell> 
+      <cell property="stateDesc" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

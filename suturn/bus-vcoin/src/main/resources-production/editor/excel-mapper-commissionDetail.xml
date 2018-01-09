@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="commissionDetailExport" 
+        name="用户提成明细"
+        class="com.minghao.common.business.pojo.CommissionDetail" limit="500">
+      <title>用户提成明细导出</title>
+      <cell property="name" width="200">被推荐人用户名</cell>
+      <cell property="regisDate" width="200">注册时间</cell> 
+      <cell property="relate" width="200">推荐关系</cell> 
+      <cell property="cleanAmount" width="200">净待收金</cell> 
+      <cell property="rate" width="200">提成比例</cell> 
+      <cell property="commissionAmount" width="200">提成金额</cell>
+      <cell property="note" width="200">备注</cell>  
+    </excel>
+</excel-mapper>

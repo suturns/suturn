@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-format>
+		<format id="LicensePlate">
+			<name>车牌号</name>
+			<regx>^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{5}$</regx>
+			<remark>正确格式 参考： 粤B88888</remark>
+		</format>
+		
+		<format id="Date">
+			<name>时间</name>
+			<regx>^(\d{4})-(0\d{1}|1[0-2])-(0\d{1}|[12]\d{1}|3[01])( (0\d{1}|1\d{1}|2[0-3]):[0-5]\d{1}:([0-5]\d{1}))?$</regx>
+			<remark>正确格式： yyyy-MM-dd hh:mm:ss</remark>
+		</format>
+		
+		<format id="Number">
+			<name>数字</name>
+			<regx>^(-?\d+)(\.\d+)?$</regx>
+			<remark></remark>
+		</format>
+		
+		<format id="Tel-Number">
+			<name>座机电话号码</name>
+			<regx>^(0[0-9]{2,3}/-)?([2-9][0-9]{6,7})+(/-[0-9]{1,4})?$</regx>
+			<remark>正确格式：区号+座机号码+分机号码</remark>
+		</format>
+		
+		<format id="Phone-Number">
+			<name>手机电话号码</name>
+			<regx>^1[3578][0-9]{9}$</regx>
+			<remark>正确格式：11位数字，且有效</remark>
+		</format>
+		
+		<format id="ID—Card">
+			<name>身份证</name>
+			<regx>^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$</regx>
+			<remark>正确格式：15或18位数字，且有效</remark>
+		</format>
+		
+		<format id="Mileage">
+			<name>里程</name>
+			<regx>^[0-9]+(.[0-9]{1})?$</regx>
+			<remark>正确格式：非负数，必须大于0，最多保留一位小数，不能包含字符</remark>
+		</format>
+		
+		<format id="PositiveInteger">
+			<name>间隔时间（月份）</name>
+			<regx>^[0-9]*[1-9][0-9]*$</regx>
+			<remark>正确格式：正整数，不包含零</remark>
+		</format>
+		
+		<format id="Expense">
+			<name>费用</name>
+			<regx>^[0-9]+(.[0-9]{2})?$</regx>
+			<remark>正确格式：非负数，两位小数</remark>
+		</format>
+		
+		<format id="PositiveIntegerOrZero">
+			<name>数量</name>
+			<regx>^([1-9]\d*|0)$</regx>
+			<remark>正确格式：正整数，包含零</remark>
+		</format>
+		
+</excel-format>

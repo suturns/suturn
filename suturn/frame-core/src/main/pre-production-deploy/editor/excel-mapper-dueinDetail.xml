@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="exportDueinDetailList" 
+        name="待收提成明细"
+        class="com.minghao.common.business.pojo.CommissionDetail" limit="500">
+      <title>待收提成明细导出</title>
+      <cell property="expireDate" width="200">待收日期</cell>
+      <cell property="title" width="200">标题</cell> 
+      <cell property="bondCompanyName" width="200">担保公司</cell> 
+      <cell property="productCoefficients" width="200">产品系数</cell> 
+      <cell property="receiptAmount" width="200">待收金额</cell> 
+      <cell property="receiptCleanAmount" width="200">净待收金额</cell>
+      <cell property="rate" width="200">提成比例</cell>
+      <cell property="singleCommissionAmount" width="200">提成金额</cell>
+    </excel>
+</excel-mapper>

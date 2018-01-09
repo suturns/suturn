@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="commissionExport" 
+        name="用户提成"
+        class="com.minghao.common.business.pojo.Commission" limit="500">
+      <title>用户提成导出</title>
+      <cell property="expectDateStr" width="200">预期发放提成时间</cell>
+      <cell property="actualDateStr" width="200">实际发放提成时间</cell>
+      <cell property="amount" width="200">上月提成金额</cell> 
+      <cell property="stateDesc" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

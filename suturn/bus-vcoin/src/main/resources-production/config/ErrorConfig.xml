@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 通用异常：5位数字，高2位为99，第3位为编号 -->
+<error>
+	<code code="99001" >
+		<msg>缺少必须参数</msg>
+	</code>
+	<code code="99004" >
+		<msg>不正确的插入记录条目数</msg>
+	</code>
+	<code code="99005" >
+		<msg>不正确的删除记录条目数</msg>
+	</code>
+	<code code="99006" >
+		<msg>不正确的修改记录条目数</msg>
+	</code>
+	<code code="99007" >
+		<msg>缓存获取失败</msg>
+	</code>
+	<code code="99008" >
+		<msg>没有查询到数据</msg>
+	</code>
+	<code code="99009" >
+		<msg>插入数据失败</msg>
+	</code>
+	<code code="99010" >
+		<msg>查询数据库失败</msg>
+	</code>
+	<code code="99011" >
+		<msg>非预期的查询结果</msg>
+	</code>
+	<code code="99012" >
+		<msg>不合法的查询结果</msg>
+	</code>
+	<code code="99013" >
+		<msg>参数不合法</msg>
+	</code>
+	<code code="99014" >
+		<msg>修改数据失败</msg>
+	</code>
+	<code code="99015" >
+		<msg>数据库连接关闭异常</msg>
+	</code>
+	<code code="99016" >
+		<msg>请求OS服务失败</msg>
+	</code>
+	<code code="99017" >
+		<msg>发送AMQ消息失败</msg>
+	</code>
+	<code code="99018" >
+		<msg>登陆验证失败</msg>
+	</code>
+	<code code="99019" >
+        <msg>服务运行异常</msg>
+    </code>
+    <code code="99020" >
+        <msg>保存文件出错</msg>
+    </code>
+    <code code="99021" >
+        <msg>请求云路由出错</msg>
+    </code>
+</error>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="receiptExport" 
+        name="我的收款"
+        class="com.minghao.common.business.pojo.ReceiptPlan" limit="500">
+      <title>收款列表导出</title>
+      <cell property="expireDate" width="200">回款日期</cell>
+      <cell property="title" width="200">借款标题</cell> 
+      <cell property="planIndexStr" width="200">期次</cell>
+      <cell property="receivableTotalAmount" width="200">回款本息(元)</cell> 
+      <cell property="capital" width="200">回款本金(元)</cell> 
+      <cell property="interest" width="200">回款利息(元)</cell> 
+      <cell property="repurchaseModeDesc" width="200">收款方式</cell> 
+      <cell property="stateDesc" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

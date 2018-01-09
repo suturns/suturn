@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="withdrawExport" 
+        name="我的提现"
+        class="com.minghao.common.business.pojo.Withdraw" limit="500">
+      <title>提现列表导出</title>
+      <cell property="flowCode" width="200">流水号</cell>
+      <cell property="createdDate" width="200">提现时间</cell> 
+      <cell property="withdrawAmount" width="200">提现金额</cell> 
+      <cell property="statusName" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

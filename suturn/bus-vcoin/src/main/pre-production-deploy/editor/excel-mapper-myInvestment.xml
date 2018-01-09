@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="myInvestmentExport" 
+        name="投资记录"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投资记录列表导出</title>
+      <cell property="createdDate" width="200">投标时间</cell>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">投标金额(元)</cell>
+      <cell property="profit" width="200">年化利率(%)</cell>
+      <cell property="productDeadline" width="200">期数</cell>
+      <cell property="modeName" width="200">还款方式</cell>
+	  <cell property="stateName" width="200">借款状态</cell>
+    </excel>
+    
+    
+    <excel id="inPaying" 
+        name="投资列表-还款中"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投资列表-还款中-导出</title>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">投标金额(元)</cell>
+      <cell property="profit" width="200">年化收益(%)</cell> 
+      <!--<cell property="planIndex" width="200">当前期数</cell>-->
+      <!--<cell property="productDeadline" width="200">总期数</cell>-->
+      <cell property="reserve1" width="200">期数</cell>
+      <cell property="collInterestCount" width="200">待收本息(元)</cell>
+	  <cell property="nextPaymentDate" width="200">下期回款日</cell>
+	  <cell property="collectInterest" width="200">下期回款本息(元)</cell>
+	  <cell property="modeName" width="200">还款方式</cell> 
+    </excel>
+    
+    <excel id="bidDing" 
+        name="投资列表-招标中"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投资列表-招标中-导出</title>
+      <cell property="createdDate" width="200">投资时间</cell>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">投标金额(元)</cell>
+      <cell property="profit" width="200">年化收益(%)</cell> 
+      <cell property="productDeadline" width="200">期数</cell>
+	  <cell property="modeName" width="200">还款方式</cell> 
+	  <cell property="statusName" width="200">状态</cell>
+    </excel>
+    
+     <excel id="finished" 
+        name="投资列表-已完结"
+        class="com.minghao.common.business.pojo.BidDetail" limit="500">
+      <title>投资列表-已完结-导出</title>
+      <cell property="title" width="200">借款标题</cell>
+      <cell property="bidAmount" width="200">投标金额(元)</cell>
+      <cell property="profit" width="200">年化收益(%)</cell> 
+      <cell property="productDeadline" width="200">期数</cell>
+      <cell property="collInterestCount" width="200">已收本息(元)</cell>
+	  <cell property="repaidDate" width="200">结清日期</cell>
+	  <cell property="interest" width="200">已赚取收益(元)</cell>
+	  <cell property="statusName" width="200">状态</cell> 
+    </excel>
+</excel-mapper>

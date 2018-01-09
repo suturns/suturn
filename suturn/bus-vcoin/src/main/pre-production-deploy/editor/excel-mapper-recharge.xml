@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excel-mapper>
+	<excel id="rechargeExport" 
+        name="我的充值"
+        class="com.minghao.common.business.pojo.Recharge" limit="500">
+      <title>充值列表导出</title>
+      <cell property="flowCode" width="200">流水号</cell>
+      <cell property="createdDate" width="200">充值时间</cell> 
+      <cell property="rechargeAmount" width="200">充值金额</cell> 
+      <cell property="statusName" width="200">状态</cell> 
+    </excel>
+</excel-mapper>
